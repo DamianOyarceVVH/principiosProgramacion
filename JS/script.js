@@ -1,13 +1,12 @@
-const datos = { //coonstante llamada de datos
+const datos = { //constante llamada de datos
 	nombre: "Papu Entertainment",
-	direccion: "Los Desarrolladores #12821, Santiago",
+	direccion: "La Grasa #2010, Santiago",
 	telefono: "+56 9 33537787",
 	email: "soporte@papuentertainment.cl",
-	website: "www.papuentertainment.cl"
+	website: "www.papuentertainment.cl";
 };
 
 const divDatos = document.getElementById('datos-empresa');
-
 divDatos.innerHTML = '
 	<h2>Datos de la empresa</h2>
 	<p><strong>Nombre:</strong>${datos.nombre}</p>
