@@ -3,7 +3,7 @@ const datos = { //constante llamada de datos
 	direccion: "La Grasa #2010, Santiago",
 	telefono: "+56 9 33537787",
 	email: "soporte@papuentertainment.cl",
-	website: "www.papuentertainment.cl";
+	website: "www.papuentertainment.cl",
 };
 
 const divDatos = document.getElementById('datos-empresa');
