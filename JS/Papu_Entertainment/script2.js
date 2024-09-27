@@ -16,3 +16,9 @@ divDatos.innerHTML = `
 	<p><strong>Email:</strong> <a href="mailto:${datos.email}">${datos.email}</a></p>
 
 	<p><strong>Sitio Web:</strong> <a href="https://liceovvh.cl/" target="_blank"> ${datos.website}</a></p>`;
+
+const btnMostrar = document.getElementById ('mostrar');
+
+btnMostrar.addEventListener('click',() => {
+	divDatos.style.display = 'block';
+})

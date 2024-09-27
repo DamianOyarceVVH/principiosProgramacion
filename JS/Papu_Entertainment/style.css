@@ -7,3 +7,13 @@ a {
     text-decoration: none;
     color: blue;
 }
+
+p {
+    font-size: 18px;
+}
+
+#mostrar {
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 20px;
+}
