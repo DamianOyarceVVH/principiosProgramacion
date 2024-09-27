@@ -17,8 +17,8 @@ divDatos.innerHTML = `
 
 	<p><strong>Sitio Web:</strong> <a href="https://liceovvh.cl/" target="_blank"> ${datos.website}</a></p>`;
 
-const btnMostrar = document.getElementById ('mostrar');
+const btnMostrar = document.getElementById ('mostrar'); // Código del boton que mostrará los datos -->
 
-btnMostrar.addEventListener('click',() => {
+btnMostrar.addEventListener('click',() => {  // Evento en el que aparecerán los datos
 	divDatos.style.display = 'block';
 })
