@@ -1,7 +1,7 @@
 const datos = { //constante llamada de datos
 	nombre: "Papu Entertainment",
 	direccion: "La Grasa #2010, Santiago",
-	telefono: "+56 9 33537787",
+	telefono: "+56 9 3353 7787",
 	email: "soporte@papuentertainment.cl",
 	website: "www.papuentertainment.cl",
 };
