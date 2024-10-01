@@ -15,10 +15,17 @@ divDatos.innerHTML = `
 
 	<p><strong>Email:</strong> <a href="mailto:${datos.email}">${datos.email}</a></p>
 
-	<p><strong>Sitio Web:</strong> <a href="https://liceovvh.cl/" target="_blank"> ${datos.website}</a></p>`;
+	<p><strong>Sitio Web:</strong> <a href="https://liceovvh.cl/" target="_blank"> ${datos.website}</a></p>
+	<p><button id="ocultar">Ocultar datos</button></p>`
 
 const btnMostrar = document.getElementById ('mostrar'); // Código del boton que mostrará los datos -->
 
 btnMostrar.addEventListener('click',() => {  // Evento en el que aparecerán los datos
 	divDatos.style.display = 'block';
+})
+
+const btnOcultar = document.getElementById ('ocultar');
+
+btnOcultar.addEventListener('click',() => {  // Evento en el que aparecerán los datos
+	divDatos.style.display = 'none';
 })
