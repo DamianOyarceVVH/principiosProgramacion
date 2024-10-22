@@ -30,7 +30,7 @@ h2 {
 input {
     margin-top: ;
     width: 90px;
-    height: 60px;
+    height: 30px;
     margin-left: 12px;
 }
 
@@ -43,15 +43,35 @@ button {
 }
 
 #add {
+    margin-top: ;
     margin-bottom: 0px;
+    margin-right: 10px;
+}
+
+#subtract {
+    margin-left: 0px;
+}
+
+#equal {
+    margin-top: 4px;
+}
+
+#result {
+    margin-top: 2px;
+    margin-left: 2px;
 }
 
 #values {
     display: flex;
-    margin-top: 70px;
+    margin-top: 100px;
     padding: 0px;
 }
 
 #num2 {
     margin-top: 0px;
+}
+
+.operations {
+    margin-top: 30px;
+    display: flex;
 }
