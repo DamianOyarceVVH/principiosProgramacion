@@ -9,17 +9,26 @@
 </head>
 <body>
     <div id="Calculator">
-        <div id="values">
-            <input type="text" id="num1" placeholder="1° Valor">
-            <input type="text" id="num2" placeholder="2° Valor">
-            <h2 id="equal"> = </h2>
-            <h2 id="result"></h2>
+        <div class="container">
+            <h2 id="result">...</h2>
+            <div id="values">
+                <input type="text" id="num1" placeholder="1° Valor">
+                <br>
+                <input type="text" id="num2" placeholder="2° Valor">
+            </div>
+        <div class="operations">
+            <div class="row">
+                <button id="add">+</button>
+                <button id="subtract">-</button>
+            </div>
+            <div class="row">
+                <button id="split">/</button>
+                <button id="multiply">*</button>
+                <br>
+                <button id="botonLimpiar">CA</button>
+            </div>
         </div>
-	<br>
-    <div class="operations">
-        <button id="add">Sumar</button>
-        <button id="subtract">Restar</button>
-    </div>
+        </div>
     </div>
     <script src="../Calculadora/calculadora.js"></script>
 </body>

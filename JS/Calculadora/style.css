@@ -4,74 +4,61 @@
 }
 
 body {
-    background-color: rgb(15, 15, 46);
-    color: whitesmoke;
 }
 
 #Calculator {
     width: 300px;
-    height: 300px;
-    background-color: rgb(7, 4, 53);
-    display: flex;
-    flex-direction: column;
+    height: 400px;
+    background-color: black;
     border-radius: 5px;
-    border: 5px solid black;
+    border: 5px solid;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-h2 {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 input {
-    margin-top: ;
-    width: 90px;
-    height: 30px;
-    margin-left: 12px;
+    font-size: 20px;
+    margin-block: 0px;
+    width: px;
+    height: 35px;
 }
 
 button {
     margin: auto;
     justify-content: center;
-    width: 70px;
-    height: 30px;
-    display: flex;
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+    margin-block: 5px;
+    background-color: orangered;
+    border: none;
+    color: whitesmoke;
+    font-size: 25px;
+    font: bolder;
 }
 
-#add {
-    margin-top: ;
-    margin-bottom: 0px;
-    margin-right: 10px;
-}
-
-#subtract {
-    margin-left: 0px;
-}
-
-#equal {
-    margin-top: 4px;
-}
-
-#result {
-    margin-top: 2px;
-    margin-left: 2px;
-}
-
-#values {
-    display: flex;
-    margin-top: 100px;
-    padding: 0px;
-}
-
-#num2 {
-    margin-top: 0px;
+.container {
+    top: 50%;
+    margin-top: 45px; /* (- menos) la mitad del valor de la altura del elemento hijo */
 }
 
 .operations {
-    margin-top: 30px;
+    border: 2px solid rgb(160, 160, 160);
+    background-color: gray;
+    padding-block: 20px;
+}
+
+#num1, #num2 {
+    margin-block: 15px;
+}
+
+#result {
+    color: whitesmoke;
+}
+
+
+.row {
     display: flex;
 }
