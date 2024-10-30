@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Establece el idioma del documento como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para dispositivos móviles -->
+    <title>Calculadora</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo_calculadora.ico"> <!-- Icono de la página -->
+    <link rel="stylesheet" href="../Calculadora_V2/style.css"> <!-- Hoja de estilos CSS externa -->
+</head>
+<body>
+    <div class="calculator"> <!-- Contenedor principal de la calculadora -->
+        <h1>CASIO</h1> <!-- Título principal de la calculadora -->
+        <span>ELECTRONIC CALCULATOR</span> <!-- Descripción breve de la calculadora -->
+        <input type="text" id="display" disabled /> <!-- Campo de texto para mostrar resultados (no editable) -->
+        <div class="buttons"> <!-- Contenedor de botones -->
+            <div class="op"> <!-- Agrupa botones de operaciones -->
+                <button class="btn" onclick="appendToDisplay('+')">+</button> <!-- Botón de suma -->
+                <button class="btn" onclick="appendToDisplay('/')">/</button> <!-- Botón de división -->
+                <button class="btn" onclick="appendToDisplay('*')">*</button> <!-- Botón de multiplicación -->
+                <button class="btn" onclick="appendToDisplay('-')">-</button> <!-- Botón de resta -->
+            </div>
+                <button class="btn" onclick="appendToDisplay('1')">1</button> <!-- Botón de número 1 -->
+                <button class="btn" onclick="appendToDisplay('2')">2</button> <!-- Botón de número 2 -->
+                <button class="btn" onclick="appendToDisplay('3')">3</button> <!-- Botón de número 3 -->
+                <button class="btn" onclick="appendToDisplay('4')">4</button> <!-- Botón de número 4 -->
+                <button class="btn" onclick="appendToDisplay('5')">5</button> <!-- Botón de número 5 -->
+                <button class="btn" onclick="appendToDisplay('6')">6</button> <!-- Botón de número 6 -->
+                <button class="btn" onclick="appendToDisplay('7')">7</button> <!-- Botón de número 7 -->
+                <button class="btn" onclick="appendToDisplay('8')">8</button> <!-- Botón de número 8 -->
+                <button class="btn" onclick="appendToDisplay('9')">9</button> <!-- Botón de número 9 -->
+                <button class="btn" onclick="appendToDisplay('0')">0</button> <!-- Botón de número 0 -->
+            <div class="red"> <!-- Agrupa botones de funciones especiales -->
+                <button class="btn" id="clear" onclick="clearDisplay()">C</button> <!-- Botón para limpiar la pantalla -->
+                <button class="btn" onclick="calculateResult()">=</button> <!-- Botón para calcular el resultado -->
+            </div>
+        </div>
+    </div>
+    <script src="../Calculadora_V2/calculadora.js"></script> <!-- Enlace al archivo JavaScript que contiene la lógica de la calculadora -->
+</body>
+</html>
+
