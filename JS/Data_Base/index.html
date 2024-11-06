@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+    <link rel="stylesheet" href="../Data_Base/style.css">
+    <script defer src="registro.js"></script> <!-- defer asegura que el script se ejecute después de que el DOM esté listo -->
+</head>
+<body>
+    <div class="container">
+		<section class="registro">
+        	<h1>Registro de Personas</h1>
+    		<form id="form">
+        	    <input type="text" id="rut" placeholder="RUT" required>
+        	    <input type="text" id="nombre" placeholder="Nombre" required>
+        	    <input type="text" id="apellidos" placeholder="Apellidos" required>
+        	    <input type="email" id="correo" placeholder="Correo Electrónico" required>
+        	    <input type="tel" id="celular" placeholder="N° Celular" required>
+        	    <button type="submit">Agregar Persona</button>
+        	</form>
+		</section>
+<!-- Asegurarse de que la estructura de la tabla esté correcta -->
+		<section id="personas">
+        	<table id="tablaPersonas">
+        	    <thead>
+        	        <tr>
+        	            <th>RUT</th>
+        	            <th>Nombre</th>
+        	            <th>Apellidos</th>
+        	            <th>Correo Electrónico</th>
+        	            <th>N° Celular</th>
+        	        </tr>
+        	    </thead>
+        	    <tbody>
+        	    </tbody>
+        	</table>
+		</section>
+    </div>
+</body>
+</html>
