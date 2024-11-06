@@ -9,7 +9,7 @@
     <script defer src="registro.js"></script> <!-- defer asegura que el script se ejecute después de que el DOM esté listo -->
 </head>
 <body>
-    <div class="container">
+    <main class="container">
 		<section class="registro">
         	<h1>Registro de Personas</h1>
     		<form id="form">
@@ -18,7 +18,7 @@
         	    <input type="text" id="apellidos" placeholder="Apellidos" required>
         	    <input type="email" id="correo" placeholder="Correo Electrónico" required>
         	    <input type="tel" id="celular" placeholder="N° Celular" required>
-        	    <button type="submit">Agregar Persona</button>
+        	    <button type="submit">+</button>
         	</form>
 		</section>
 <!-- Asegurarse de que la estructura de la tabla esté correcta -->
@@ -26,17 +26,17 @@
         	<table id="tablaPersonas">
         	    <thead>
         	        <tr>
-        	            <th>RUT</th>
-        	            <th>Nombre</th>
-        	            <th>Apellidos</th>
-        	            <th>Correo Electrónico</th>
-        	            <th>N° Celular</th>
+        	        	<th>RUT</th>
+        	        	<th>Nombre</th>
+        	        	<th>Apellidos</th>
+        	        	<th>Correo Electrónico</th>
+        	        	<th>N° Celular</th>
         	        </tr>
         	    </thead>
         	    <tbody>
         	    </tbody>
         	</table>
 		</section>
-    </div>
+    </main>
 </body>
 </html>
