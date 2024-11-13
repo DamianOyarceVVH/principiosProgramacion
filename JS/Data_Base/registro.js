@@ -1,3 +1,4 @@
+// Damián Oyarce - 13/11/2024
 // Agrega una funcion al momento de agregar un registro haciendo click en el botón del formulario
 document.getElementById('form').addEventListener('submit', function(event) { 
     event.preventDefault(); 

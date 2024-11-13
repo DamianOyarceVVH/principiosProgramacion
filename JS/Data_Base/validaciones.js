@@ -1,3 +1,4 @@
+// Damián Oyarce - 13/11/2024
 // Función para validar el celular
 function validarCelular(celular) {
     // Selecciona todas las celdas de la tabla celular con el id 'tablaPersonas'
