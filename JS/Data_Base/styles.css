@@ -1,8 +1,10 @@
+/* Elementos aplicados a todas las etiquetas */
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Elementos aplicados a la etiqueta con la clase 'container' */
 .container {
     display: flex;
     position: absolute;
@@ -12,6 +14,7 @@
 
 }
 
+/* Elementos aplicados a la etiqueta con la clase 'registro' */
 .registro {
     margin: 10px;
     padding-inline: 30px;
@@ -22,6 +25,7 @@
     position: static;
 }
 
+/* Elementos aplicados a la etiqueta 'h1' con la clase 'registro' */
 .registro h1 {
     background-color: #23222B;
     padding: 20px;
@@ -29,12 +33,14 @@
     border-radius: 5px;
 }
 
+/* Elementos aplicados a la etiqueta 'input' con la clase 'registro' */
 .registro input {
     margin-block: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
+/* Elementos aplicados a la etiqueta 'button' con la clase 'registro' */
 .registro button {
     padding-block: 4%;
     padding-inline: 7%;
@@ -48,12 +54,14 @@
     background-color: #23222B;
 }
 
+/* Elementos aplicados a la etiqueta con el id 'form' */
 #form {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
 }
 
+/* Elementos aplicados a la etiqueta con el id 'personas' */
 #personas {
     margin: 10px;
     border: 3px black solid;
@@ -62,6 +70,7 @@
     border-radius: 10px;
 }
 
+/* Elementos aplicados a la etiqueta 'th' con el id 'tablaPersonas' */
 #tablaPersonas th {
     padding: 15px;
     background-color: #23222B;
@@ -69,6 +78,7 @@
     margin-inline: 2px;
 }
 
+/* Elementos aplicados a la etiqueta 'td' con el id 'tablaPersonas' */
 #tablaPersonas td {
     padding: 10px;
     border: 3px #23222B solid;

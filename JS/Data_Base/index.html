@@ -5,38 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Personas</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
-    <link rel="stylesheet" href="../Data_Base/style.css">
+    <link rel="stylesheet" href="../Data_Base/styles.css">
     <script defer src="registro.js"></script>
 	<script defer src="validaciones.js"></script>
 </head>
 <body>
-    <main class="container">
+    <main class="container"> <!-- Contenedor de todo el contenido de la tabla de registro y el formulario -->
 		<section class="registro">
-        	<h1>Registro de Personas</h1>
-    		<form id="form">
-        	    <input type="text" id="rut" placeholder="RUT" required>
-        	    <input type="text" id="nombre" placeholder="Nombre" required>
-        	    <input type="text" id="apellidos" placeholder="Apellidos" required>
-        	    <input type="email" id="correo" placeholder="Correo Electrónico" required>
-        	    <input type="tel" id="celular" placeholder="N° Celular" required>
-        	    <button type="submit">+</button>
-        	</form>
+			<h1>Registro de Personas</h1>
+			<form id="form"> <!-- Formulario con sus respectivos campos de relleno -->
+				<input type="text" id="rut" placeholder="RUT" required>
+				<input type="text" id="nombre" placeholder="Nombre" required>
+				<input type="text" id="apellidos" placeholder="Apellidos" required>
+				<input type="email" id="correo" placeholder="Correo Electrónico" required>
+				<input type="tel" id="celular" placeholder="N° Celular" required>
+				<button type="submit">+</button> <!-- Botón con la función de agregar los datos rellenados anteriormente-->
+			</form>
 		</section>
-<!-- Asegurarse de que la estructura de la tabla esté correcta -->
 		<section id="personas">
-        	<table id="tablaPersonas">
-        	    <thead>
-        	        <tr>
-        	        	<th>RUT</th>
-        	        	<th>Nombre</th>
-        	        	<th>Apellidos</th>
-        	        	<th>Correo Electrónico</th>
-        	        	<th>N° Celular</th>
-        	        </tr>
-        	    </thead>
-        	    <tbody>
-        	    </tbody>
-        	</table>
+			<table id="tablaPersonas"> <!-- Tabla de las personas registradas -->
+				<thead>
+					<tr> <!-- Columnas con cada dato requerido -->
+						<th>RUT</th>
+						<th>Nombre</th>
+						<th>Apellidos</th>
+						<th>Correo Electrónico</th>
+						<th>N° Celular</th>
+					</tr>
+				</thead>
+				<tbody>	<!-- Cuerpo donde aparecerán los datos de los registros agregados -->
+				</tbody>
+			</table>
 		</section>
     </main>
 </body>

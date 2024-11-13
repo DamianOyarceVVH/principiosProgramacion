@@ -1,36 +1,43 @@
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío del formulario
+// Agrega una funcion al momento de agregar un registro haciendo click en el botón del formulario
+document.getElementById('form').addEventListener('submit', function(event) { 
+    event.preventDefault(); 
 
-    // Obtención de los valores de los campos
-    const rut = document.getElementById('rut').value;
-    const nombre = document.getElementById('nombre').value;
-    const apellidos = document.getElementById('apellidos').value;
-    const correo = document.getElementById('correo').value;
-    const celular = document.getElementById('celular').value;
+// Creación de las constantes que se vinculan con los campos a rellenar del formulario
+    const rut = document.getElementById('rut').value.trim();
+    const nombre = document.getElementById('nombre').value.trim();
+    const apellidos = document.getElementById('apellidos').value.trim();
+    const correo = document.getElementById('correo').value.trim();
+    const celular = document.getElementById('celular').value.trim();
 
-    // Validación del RUT
-    const rutRegex = /^[0-9]{8}-[0-9K]$/i;
-    if (!rutRegex.test(rut)) {
-        alert("El RUT debe tener el formato 8 dígitos seguidos de un guion y un dígito o la letra K.");
+// Valida y deniega un rut a través de la comprobación de un mal formato (está mal escrito o faltan caracteres)
+    if (!validarRUT(rut)) { 
+        alert('El RUT ingresado no es válido o tiene un formato incorrecto.');
         return;
     }
 
-    // Validación del número de celular
-    const celularRegex = /^[0-9]+$/;
-    if (!celularRegex.test(celular)) {
-        alert("El número de celular solo debe contener dígitos.");
+// Comprueba y deniega la entrada de un rut que ya existe en el registro
+    if (rutExisteEnTabla(rut)) { 
+        alert('El RUT ingresado ya ha sido registrado.');
         return;
     }
 
-    // Verificación de que el tbody está siendo seleccionado
+// Comprueba y deniega la entrada de un correo que ya existe en el registro
+    if (!validarCorreo(correo)) {
+        alert('El correo electrónico ya ha sido registrado.');
+        return;
+    }
+
+// Comprueba y deniega la entrada de un número celular que ya existe en el registro
+    if (!validarCelular(celular)) {
+        alert('El número de celular ya ha sido registrado.');
+        return;
+    }
+
+// Constantes donde se crean las tablas de los registros
     const tablaBody = document.getElementById('tablaPersonas').querySelector('tbody');
-    if (!tablaBody) {
-        console.error("No se pudo encontrar el tbody en la tabla.");
-        return;
-    }
-
-    // Creación de la nueva fila
     const nuevaFila = document.createElement('tr');
+
+// Orden de los archivos en la nueva fila
     nuevaFila.innerHTML = `
         <td>${rut}</td>
         <td>${nombre}</td>
@@ -39,12 +46,9 @@ document.getElementById('form').addEventListener('submit', function(event) {
         <td>${celular}</td>
     `;
 
-    // Agregar la nueva fila a la tabla
+// Agrega nuevos registros a la tabla
     tablaBody.appendChild(nuevaFila);
 
-    // Mensaje en consola para confirmar que la fila fue agregada
-    console.log("Fila agregada:", { rut, nombre, apellidos, correo, celular });
-
-    // Limpiar los campos del formulario
+// Reseteo del formulario al agregar un registro
     document.getElementById('form').reset();
 });
