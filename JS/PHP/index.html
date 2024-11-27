@@ -11,42 +11,46 @@
 </head>
 <body>
 	<main>
-		<h1>Registro de Usuarios</h1>
-		<!-- Formulario para agregar usuario -->
-		<form method="POST" id="formulario">
-			<div class="form-group">
-				<label for="rut">Rut:</label>
-				<input type="text" id="rut" name="rut" required>
-			</div>
-			<div class="form-group">
-				<label for="nombre">Nombre:</label>
-				<input type="text" id="nombre" name="nombre" required>
-			</div>
-			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
-			</div>
-			<button type="submit">Agregar Usuario</submit>
-		</form>
-		<h2>Lista de Usuarios</h2>
-		<table>
-			<thead>
-				<tr>
-					<th>Rut</th>
-					<th>Nombre</th>
-					<th>Email</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php foreach ($usuarios as $usuario): ?>
-				<tr>
-					<td><?php echo $usuario['rut']; ?></td>
-					<td><?php echo $usuario['nombre']; ?></td>
-					<td><?php echo $usuario['email']; ?></td>
-				</tr>
-				<?php endforeach; ?>
-			</tbody>
-		</table>
+		<section id="registro">
+			<h1>Registro de Usuarios</h1>
+			<!-- Formulario para agregar usuario -->
+			<form method="POST" id="formulario">
+				<div class="form-group">
+					<label for="rut">Rut:</label>
+					<input type="text" id="rut" name="rut" required>
+				</div>
+				<div class="form-group">
+					<label for="nombre">Nombre:</label>
+					<input type="text" id="nombre" name="nombre" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<button type="submit">+</button>
+			</form>
+		</section>
+		<section id="lista">
+			<h2>Lista de Usuarios</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Rut</th>
+						<th>Nombre</th>
+						<th>Email</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($usuarios as $usuario): ?>
+					<tr>
+						<td><?php echo $usuario['rut']; ?></td>
+						<td><?php echo $usuario['nombre']; ?></td>
+						<td><?php echo $usuario['email']; ?></td>
+					</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		</section>
 	</main>
 </body>
 </html>
