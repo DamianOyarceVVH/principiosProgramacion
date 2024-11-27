@@ -7,24 +7,46 @@
     <title>Registro</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="registro.js"></script>
-	<script defer src="validaciones.js"></script>
+    <script defer src="conexion.js"></script>
 </head>
 <body>
 	<main>
-	<h1>Registro de Usuarios</h1>
-	<!-- Formulario para agregar usuario -->
-	<form method="POST" id="formulario">
-		<div class="form-group">
-		<label for="rut">Rut:</label>
-		<input type="text" id="rut" name="rut" required>
-		</div>
-		<div class="form-group">
-		<label for="nombre">Nombre:</label>
-		<input type="text" id="nombre" name="nombre" required>
-		</div>
-		
-	</form>
+		<h1>Registro de Usuarios</h1>
+		<!-- Formulario para agregar usuario -->
+		<form method="POST" id="formulario">
+			<div class="form-group">
+				<label for="rut">Rut:</label>
+				<input type="text" id="rut" name="rut" required>
+			</div>
+			<div class="form-group">
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+			<button type="submit">Agregar Usuario</submit>
+		</form>
+		<h2>Lista de Usuarios</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Rut</th>
+					<th>Nombre</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($usuarios as $usuario): ?>
+				<tr>
+					<td><?php echo $usuario['rut']; ?></td>
+					<td><?php echo $usuario['nombre']; ?></td>
+					<td><?php echo $usuario['email']; ?></td>
+				</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
 	</main>
 </body>
 </html>
