@@ -1,4 +1,46 @@
 <!-- Damián Oyarce - 13/11/2024 -->
+<?php
+$servidor = "localhost"; //127.0.0.1
+$usuario = "root"; //root@localhost
+$password = "";
+$bdatos = "registro";
+
+// Establecer la conexión
+$conecta = mysqli_connect($servidor, $usuario, $password, $bdatos);
+
+// Verificar la conexión
+if ($conecta->connect_error) {
+    die("Error no se conectó con la base de datos: " . $conecta->connect_error);
+}
+?>
+<?php
+include 'conexion.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['rut'],$_POST['nombre'], $_POST['email'])) {
+    $rut = $_POST['rut'];
+	$nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+
+    $consulta = "INSERT INTO usuarios (rut, nombre, email) VALUES (?, ?, ?)";
+    $stmt = $conecta->prepare($consulta);
+    $stmt->bind_param("sss", $rut, $nombre, $email);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Usuario agregado con éxito');</script>";
+    } else {
+        echo "<script>alert('Error al agregar usuario');</script>";
+    }
+}
+
+$usuarios = [];
+$resultado = $conecta->query("SELECT * FROM usuarios");
+
+if ($resultado->num_rows > 0) {
+    while ($fila = $resultado->fetch_assoc()) {
+        $usuarios[] = $fila;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
