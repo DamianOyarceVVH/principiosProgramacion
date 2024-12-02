@@ -9,15 +9,26 @@
 main {
     display: flex;
     justify-content: center;
+    position: absolute;
+    left: 30%;
+    top: 25%;
 }
 
 #registro, #lista {
     padding: 20px;
     font-size: 20px;
     text-align: center;
+    background-color: black;
+    color: white;
 }
 
 #registro label {
+    font-weight: bold;
+}
+
+#registro input {
+    padding-block: 10px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -41,4 +52,16 @@ button {
 #lista table {
     margin-inline: auto;
     width: 100%;
+}
+
+#lista th {
+    border: solid white;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+#lista td {
+    border: solid white;
+    border-radius: 10%;
+    padding: 10px;
 }
